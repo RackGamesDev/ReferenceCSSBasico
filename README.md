@@ -1,2 +1,2 @@
 # ReferenceCSSBasico
-Lo basico de CSS en español
+Lo básico de CSS en español
