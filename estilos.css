@@ -2,102 +2,102 @@
 
 
 /*SELECTORES:*/
-h1{/*selector por etiqueta*/
+h1{/*Selector por etiqueta*/
     color:black;/*propiedad: valor;*/
 }
-.unaclase{/*selector por clase*/
+.unaclase{/*Selector por clase*/
     color:black;
 }
-.unaclase.otraclase#unid{/*si se concatenan asi se aplica solo a los elementos que cumplan todos los selectores*/
+.unaclase.otraclase#unid{/*Si se concatenan asi se aplica solo a los elementos que cumplan todos los selectores*/
     color:black;
 }
-#unid{/*selector por id*/
+#unid{/*Selector por id*/
     color:black;
 }
-h1,#unid{/*una sola hoja de estilos para varios selectores, incluso de distinto tipo*/
+h1,#unid{/*Una sola hoja de estilos para varios selectores, incluso de distinto tipo*/
     color:black;
 }
-body{/*para aplicar estilos globalmente se puede hacer a etiquetas mas grandes como body o html*/
+body{/*Para aplicar estilos globalmente se puede hacer a etiquetas mas grandes como body o html*/
     color:black;
 }
-*{/*hace referencia a literalmente todo*/
+*{/*Hace referencia a literalmente todo*/
     font-family: 'Courier New', Courier, monospace;/*se suele usar para fuentes*/
 }
-html{/*otra forma de referirse globalmente*/
+html{/*Otra forma de referirse globalmente*/
     scroll-behavior: smooth;/*cambia la animacion de scroll*/
 }
-div p{/*esto afectaria a las etiquetas p que esten dentro de div, tambien vale con clases y ids, se puede concatenar mas afectando al ultimo*/
+div p{/*Esto afectaria a las etiquetas p que esten dentro de div, tambien vale con clases y ids, se puede concatenar mas afectando al ultimo*/
     color:black;
 }
-div>p{/*lo mismo pero solo si es directamente hijo de el elemento anterior*/
+div>p{/*Lo mismo pero solo si es directamente hijo de el elemento anterior*/
     color:black;
 }
-div+p{/*en este caso se aplica al primer elemento p que encuentre despues que este al mismo nivel*/
+div+p{/*En este caso se aplica al primer elemento p que encuentre despues que este al mismo nivel*/
     color:black;
 }
-div~p{/*igual pero no solo el primero adelante, sino todos los p que esten al mismo nivel en adelante*/
+div~p{/*Igual pero no solo el primero adelante, sino todos los p que esten al mismo nivel en adelante*/
     color:black;
 }
 /*PSEUDOCLASES:*/
-a:link{/*estos estilos solo se aplican cuando una propiedad del elemento sea cierta, se pueden poner talcual y afecta a todo, link es cuando haya un enlace a algo*/
+a:link{/*Estos estilos solo se aplican cuando una propiedad del elemento sea cierta, se pueden poner talcual y afecta a todo, link es cuando haya un enlace a algo*/
     color:black;
 }
-a:visited{/*cuando el link ya este visitado*/
+a:visited{/*Cuando el link ya este visitado*/
     text-decoration: none;/*en el caso de los enlaces, los deja como un label normal*/
 }
-a:hover{/*cuando pases el raton por encima*/
+a:hover{/*Cuando pases el raton por encima*/
     color:black;
 }
-a:active{/*cuando mantengas presionado con el raton*/
+a:active{/*Cuando mantengas presionado con el raton*/
     color:black;
 }
-p:first-child{/*afecta solo al primer elemento hijo de algo*/
+p:first-child{/*Afecta solo al primer elemento hijo de algo*/
     color:black;
 }
-p:last-child{/*afecta solo al ultimo elemento hijo de algo*/
+p:last-child{/*Afecta solo al ultimo elemento hijo de algo*/
     color:black;
 }
-input:focus{/*si lo estas usando, usado sobretodo para inputs*/
+input:focus{/*Si lo estas usando, usado sobretodo para inputs*/
     color: black;
 }
-p:nth-child(even){/*afecta a los pares o impares dentro de el elemento padre (even/odd)*/
+p:nth-child(even){/*Afecta a los pares o impares dentro de el elemento padre (even/odd)*/
     color: black;
 }
-:not(.activo){/*se refiere a todo lo que no cumpla el selector entre parentesis*/
+:not(.activo){/*Se refiere a todo lo que no cumpla el selector entre parentesis*/
     color: black;
 }
-/*hay muchos mas*/
+/*Hay muchos mas*/
 /*PSEUDOELEMENTO:*/
-p::first-line{/*los pseudoelementos afectan parcialmente a un elemento, se pueden poner talcual y afecta a todo, en este caso solo cambia la primera linea (tambien esta en last)*/
+p::first-line{/*Los pseudoelementos afectan parcialmente a un elemento, se pueden poner talcual y afecta a todo, en este caso solo cambia la primera linea (tambien esta en last)*/
     color: black;
 }
-p::first-letter{/*igual pero con las letras, tambien esta last*/
+p::first-letter{/*Igual pero con las letras, tambien esta last*/
     color: black;
 }
-p::after{/*afecta a lo que haya despues, tambien esta before*/
+p::after{/*Afecta a lo que haya despues, tambien esta before*/
     color: black;
 }
-::marker{/*esto sirve para las listas, hace referencia al punto · */
+::marker{/*Esto sirve para las listas, hace referencia al punto · */
     color: black;
 }
-::selection{/*hace referencia al texto seleccionado*/
+::selection{/*Hace referencia al texto seleccionado*/
     color: black;
 }
 /*POR SELECTOR:*/
-a[target]{/*se refiere solo a los elementos con esa propiedad especificada*/
+a[target]{/*Se refiere solo a los elementos con esa propiedad especificada*/
     color: black;
 }
-[target="_blank"]{/*se refiere a los que tengan la propiedad esa con el valor ese*/
+[target="_blank"]{/*Se refiere a los que tengan la propiedad esa con el valor ese*/
     color: black;
-    background-color: #f2f1ab !important;/*lo de important tiene mas prioridad que cualquier otra cosa rompiendo la ejecucion en cascada, recomendable no usarlo*/
+    background-color: #f2f1ab !important;/*Lo de important tiene mas prioridad que cualquier otra cosa rompiendo la ejecucion en cascada, recomendable no usarlo*/
 }
 /*MEDIA QUERYS:*/
-@media (min-width: 480px){/*esto solo se aplicara cuando la ventana mida en x MAS de lo que ponga, se puede hacer lo contrario con max-width*/
-    div{/*dentro se ponen tantos selectores como sean necesarios*/
+@media (min-width: 480px){/*Esto solo se aplicara cuando la ventana mida en x MAS de lo que ponga, se puede hacer lo contrario con max-width*/
+    div{/*Dentro se ponen tantos selectores como sean necesarios*/
         background-color: red;
     }
 }
-@media (min-width: 500px) and (max-width: 900px){/*se pueden poner varias condiciones, en este caso seria si el tamagno esta entre esos 2*/
+@media (min-width: 500px) and (max-width: 900px){/*Se pueden poner varias condiciones, en este caso seria si el tamagno esta entre esos 2*/
     div{
         background-color: red;
     }
@@ -105,10 +105,10 @@ a[target]{/*se refiere solo a los elementos con esa propiedad especificada*/
 
 /*VARIABLES*/
 :root{
-    --color-principal: gray;/*se pueden hacer variables para usarlas luego, deben ser creadas en el root y solo funcionaran mas adelante, la variable puede almacenar cualquier valor*/
+    --color-principal: gray;/*Se pueden hacer variables para usarlas luego, deben ser creadas en el root y solo funcionaran mas adelante, la variable puede almacenar cualquier valor*/
 }
 .fondo{
-    color: var(--color-principal);/*se establece la variable*/
+    color: var(--color-principal);/*Se establece la variable*/
 }
 
 /*UNIDADES DE MEDIDA:*/
@@ -127,96 +127,95 @@ a[target]{/*se refiere solo a los elementos con esa propiedad especificada*/
 
 h1{
     /*COLORES:*/
-    color: black;/*color de texto    se puede poner el color directamente con su nombre*/
-    background-color: rgba(255,3,56, 0.5);/*color de fondo de la caja      se puede poner el color con rgb o rgba(x,x,x,0 - 1)*/
-    background-color: hsl(359, 100%, 50%, 0.7);/*esto es hue(cual color del arcoiris 0-359), saturacion con % y brillo con % y alpha opcional*/
-    color: #f2f1ab;/*se puede poner el color hexadecimal con #, se puede poner 2 digitos mas para hacer el alfa: #ffffff1a*/
-    opacity: 0.5;/*cambia la opacidad sin cambiar el color entero*/
+    color: black;/*Color de texto    se puede poner el color directamente con su nombre*/
+    background-color: rgba(255,3,56, 0.5);/*Color de fondo de la caja      se puede poner el color con rgb o rgba(x,x,x,0 - 1)*/
+    background-color: hsl(359, 100%, 50%, 0.7);/*Esto es hue(cual color del arcoiris 0-359), saturacion con % y brillo con % y alpha opcional*/
+    color: #f2f1ab;/*Se puede poner el color hexadecimal con #, se puede poner 2 digitos mas para hacer el alfa: #ffffff1a*/
+    opacity: 0.5;/*Cambia la opacidad sin cambiar el color entero*/
 
     /*PATRONES:*/
-    background: linear-gradient(45deg, white 0%, black 50%, red 100%);/*background puede interpretar colores y mas cosas      linear gradient es (grados, color1, color2...) el porcentaje es en que sitio empieza*/
-    background-image: url(assets/img.png);/*en este caso pone una imagen de fondo, url puede ser local o alguna pagina que devuelva una imagen*/
+    background: linear-gradient(45deg, white 0%, black 50%, red 100%);/*Background puede interpretar colores y mas cosas      linear gradient es (grados, color1, color2...) el porcentaje es en que sitio empieza*/
+    background-image: url(assets/img.png);/*En este caso pone una imagen de fondo, url puede ser local o alguna pagina que devuelva una imagen*/
     background-repeat: no-repeat;/*no-repeat o repeat, vale tanto para imagenes como para degradados. tambien estan repeat-x o y para un solo eje*/
-    background-position: bottom;/*hace que se ponga abajo de donde deberia, tambien se puede con los 4 lados*/
-    background-attachment: fixed;/*hace que se mueva junto a la camara*/
-    background: black url(assets/img.png) no-repeat bottom;/*cuando no se especifica la propiedad, se pueden poner todas de golpe*/
+    background-position: bottom;/*Hace que se ponga abajo de donde deberia, tambien se puede con los 4 lados*/
+    background-attachment: fixed;/*Hace que se mueva junto a la camara*/
+    background: black url(assets/img.png) no-repeat bottom;/*Cuando no se especifica la propiedad, se pueden poner todas de golpe*/
 
     /*BORDES:*/
-    border-style: dotted;/*aplica un borde (none, hidden, dotted, dashed, solid, double, groove, rigde, inset, outset)*/
-    border-style: dotted dashed groove ridge;/*uno para cada lado en el sentido de las agujas del reloj*/
-    border-color: black;/*borde negro a todos los lados, se pueden poner varios uno para cada lado*/
-    border-width: 1px;/*tamagno de un pixel, se pueden poner varios uno para cada lado*/
-    border: 2px dotted blue;/*todos los atributos en una linea*/
-    border-radius: 25px 50px;/*para redondearlo, un numero para cada esquina*/ 
+    border-style: dotted;/*Aplica un borde (none, hidden, dotted, dashed, solid, double, groove, rigde, inset, outset)*/
+    border-style: dotted dashed groove ridge;/*Uno para cada lado en el sentido de las agujas del reloj*/
+    border-color: black;/*Borde negro a todos los lados, se pueden poner varios uno para cada lado*/
+    border-width: 1px;/*Tamagno de un pixel, se pueden poner varios uno para cada lado*/
+    border: 2px dotted blue;/*Todos los atributos en una linea*/
+    border-radius: 25px 50px;/*Para redondearlo, un numero para cada esquina*/ 
 }
 .caja1{
     border: 5px solid black;
     /*MARGENES Y TAMAGNOS:*/
-    height: 300px;/*tamagnos absolutos*/
+    height: 300px;/*Tamagnos absolutos*/
     width: 300px;
-    min-width: 10px;/*este tamagno no podra ser de menos de eso (porque puede cambiar segun contenido o tamagno de la ventana)*/
-    max-width: 500px;/*igual pero con el minimo*/
-    margin-top: 30px;/*margen exterior de arriba, se puede por todos los lados o poner "margin: arriba derecha abajo izquierda"*/
-    padding-top: 30px;/*igual que margin pero el espacio es por dentro*/
+    min-width: 10px;/*Este tamagno no podra ser de menos de eso (porque puede cambiar segun contenido o tamagno de la ventana)*/
+    max-width: 500px;/*Igual pero con el maximo*/
+    margin-top: 30px;/*Margen exterior de arriba, se puede por todos los lados o poner "margin: arriba derecha abajo izquierda"*/
+    padding-top: 30px;/*Igual que margin pero el espacio es por dentro*/
 
     /*DISPLAYS:*/
-    display: inline;/*el tamagno se adapta a su contenido, como un span*/
-    display: none;/*como si no estuviese*/
-    display: block;/*como de normal, igual que un div ocupando todo el ancho*/
-    visibility: hidden;/*no se renderiza pero si ocupa espacio*/
+    display: inline;/*El tamagno se adapta a su contenido, como un span*/
+    display: none;/*Como si no estuviese*/
+    display: block;/*Como de normal, igual que un div ocupando todo el ancho*/
+    visibility: hidden;/*No se renderiza pero si ocupa espacio*/
     visibility: visible;
-    z-index: 2;/*si se renderiza por encima o por debajo, el por defecto es 0*/
-    overflow: hidden;/*si el texto o otras cosas adentro se salen de la caja simplemente no se ve, de normal se sale*/
-    overflow-x: scroll;/*aparece un scroll si se sale      se puede especificar por x o y*/
-    float: left;/*el contenido exterior, como el texto, lo rodeara por la derecha, de normal se pondria abajo*/
+    z-index: 2;/*Si se renderiza por encima o por debajo, el por defecto es 0*/
+    overflow: hidden;/*Si el texto o otras cosas adentro se salen de la caja simplemente no se ve, de normal se sale*/
+    overflow-x: scroll;/*Aparece un scroll si se sale      se puede especificar por x o y*/
+    float: left;/*El contenido exterior, como el texto, lo rodeara por la derecha, de normal se pondria abajo*/
     /*POSICIONES:*/
-    position: static;/*lo normal*/
-    position: relative;/*calcula su posicion en relacion al objeto padre*/
-    left: 15px;/*esto lo empujaria hacia la derecha, tambien esta right*/
-    top: 15px;/*esto lo empujaria hacia abajo, tambien esta bottom*/
-    position:  fixed;/*se mueve junto a la camara, lo de las posiciones es relativo a la esquina de la ventana*/
+    position: static;/*Lo normal*/
+    position: relative;/*Calcula su posicion en relacion al objeto padre*/
+    left: 15px;/*Esto lo empujaria hacia la derecha, tambien esta right*/
+    top: 15px;/*Esto lo empujaria hacia abajo, tambien esta bottom*/
+    position:  fixed;/*Se mueve junto a la camara, lo de las posiciones es relativo a la esquina de la ventana*/
     left: 0;
     top: 0;
-    position: absolute;/*se superpone a otros, sin ocupar espacio*/
-    position: sticky;/*igual que relative pero nunca se sale de la camara, moviendose para evitarlo. las posiciones definen cuando va a valorar si se va a salir de la camara*/
+    position: absolute;/*Se superpone a otros, sin ocupar espacio*/
+    position: sticky;/*Igual que relative pero nunca se sale de la camara, moviendose para evitarlo. las posiciones definen cuando va a valorar si se va a salir de la camara*/
 }
 p{
     /*TEXTO:*/
-    text-align: center;/*alineacion (right, left, center, justify, end)*/
-    text-decoration-line: underline;/*tipo de linea (underline, overline, line-through)*/
-    text-decoration-color: green;/*color de esa linea*/
-    text-decoration-style: wavy;/*tipo de linea, similar a lo del borde*/
-    text-decoration: underline wavy red 3px;/*poniendolo todo a la vez*/
-    text-transform: uppercase;/*cambiar el texto (lowercase, uppercase, capitalize)*/
-    text-indent: 50px;/*sangria al texto (primera linea)*/
-    letter-spacing: 10px;/*espacio entre letras, se pueden numeros negativos*/
-    line-height: 1;/*espacio entre lineas, 1 es lo normal*/
-    word-spacing: 20px;/*espacio entre palabras, se pueden numeros negativos*/
-    white-space: nowrap;/*el texto se sale del elemento padre*/
-    text-shadow: 2px 2px 5px gray;/*distancia x y y de la sombra y cuanto blur y color. se puede separar con , para hacer varias sombras*/
-    font-size: 1em;/*tamagno de letra, 1em es lo normal pero tambien se puede hacer con px*/
+    text-align: center;/*Alineacion (right, left, center, justify, end)*/
+    text-decoration-line: underline;/*Tipo de linea (underline, overline, line-through)*/
+    text-decoration-color: green;/*Color de esa linea*/
+    text-decoration-style: wavy;/*Tipo de linea, similar a lo del borde*/
+    text-decoration: underline wavy red 3px;/*Poniendolo todo a la vez*/
+    text-transform: uppercase;/*Cambiar el texto (lowercase, uppercase, capitalize)*/
+    text-indent: 50px;/*Sangria al texto (primera linea)*/
+    letter-spacing: 10px;/*Espacio entre letras, se pueden numeros negativos*/
+    line-height: 1;/*Espacio entre lineas, 1 es lo normal*/
+    word-spacing: 20px;/*Espacio entre palabras, se pueden numeros negativos*/
+    white-space: nowrap;/*El texto se sale del elemento padre*/
+    text-shadow: 2px 2px 5px gray;/*Distancia x y y de la sombra y cuanto blur y color. se puede separar con , para hacer varias sombras*/
+    font-size: 1em;/*Tamagno de letra, 1em es lo normal pero tambien se puede hacer con px*/
 
     /*FUENTES:*/
-    font-family: 'Courier New', Courier, monospace;/*intenta poner la primera fuente y si falla va a la siguiente*/
-    font-style: italic;/*tipo de letra (normal, italic)*/
-    font-weight: bold;/*el tipo de bold, se puede con numeros o poner normal*/
-    font-variant: small-caps;/*estilos varios*/
-    font-family: 'Tilt Prism', cursive;/*una vez importada la fuente en html desde google fonts se pega tambien en el css*/
+    font-family: 'Courier New', Courier, monospace;/*Intenta poner la primera fuente y si falla va a la siguiente*/
+    font-style: italic;/*Tipo de letra (normal, italic)*/
+    font-weight: bold;/*El tipo de bold, se puede con numeros o poner normal*/
+    font-variant: small-caps;/*Estilos varios*/
+    font-family: 'Tilt Prism', cursive;/*Una vez importada la fuente en html desde google fonts se pega tambien en el css*/
 }
 ul{
     /*LISTAS:*/
-    list-style-type: armenian;/*hay varios tipos de ordenacion incluyendo none*/
-    list-style-image: url(/assets/icono.ico);/*se puede poner una imagen por cada item*/
+    list-style-type: armenian;/*Hay varios tipos de ordenacion incluyendo none*/
+    list-style-image: url(/assets/icono.ico);/*Se puede poner una imagen por cada item*/
 }
 /*TABLAS:*/
 table,tr,th,td{
-    
     border: 1px solid black;
 }
 table{
-    border-collapse: collapse;/*sus items se juntan segun borde*/
+    border-collapse: collapse;/*Sus items se juntan segun borde*/
 }
-tr:nth-child(even){/*un pseudoselector para filas impares, odd para par*/
+tr:nth-child(even){/*Un pseudoselector para filas impares, odd para par*/
     background-color: gray;
 }
 tr:hover{
@@ -224,9 +223,9 @@ tr:hover{
 }
 
 /*ANIMACIONES*/
-@keyframes cuadrado{/*se crea la animacion en si con el nombre que sea*/
-    0%{/*se puede poner por porcentajes*/
-        background: red;/*se puede con cualquer propiedad escalable*/
+@keyframes cuadrado{/*Se crea la animacion en si con el nombre que sea*/
+    0%{/*Se puede poner por porcentajes*/
+        background: red;/*Se puede con cualquer propiedad escalable*/
     }
     50%{
         background: blue;
@@ -236,41 +235,41 @@ tr:hover{
     }
 }
 div:hover{
-    animation-name: cuadrado;/*cuando este hover se ejecutara esta animacion*/
-    animation-duration: 1s;/*se especifica la duracion desde el from hasta el to*/
-    animation-timing-function: ease-in-out;/*hay de varios tipos, se suelen usar senoidales*/
-    animation-delay: 0.1s;/*cuando se ejecute la animacion tardara esto*/
-    animation-iteration-count: infinite;/*provoca que la animacion se quede en bucle*/
-    animation-direction: alternate;/*hay de varios tipos, esta hace como boomerang*/
+    animation-name: cuadrado;/*Cuando este hover se ejecutara esta animacion*/
+    animation-duration: 1s;/*Se especifica la duracion desde el from hasta el to*/
+    animation-timing-function: ease-in-out;/*Hay de varios tipos, se suelen usar senoidales*/
+    animation-delay: 0.1s;/*Cuando se ejecute la animacion tardara esto*/
+    animation-iteration-count: infinite;/*Provoca que la animacion se quede en bucle*/
+    animation-direction: alternate;/*Hay de varios tipos, esta hace como boomerang*/
 }
-/*transicion:*/
-@keyframes imagen{/*en este caso sirve mas para transicion*/
-    from{/*como esta el estilo al principio*/
+/*TRANSICIONES:*/
+@keyframes imagen{/*En este caso sirve mas para transicion*/
+    from{/*Como esta el estilo al principio*/
         opacity: 1;
     }
-    to{/*como esta el estilo al final*/
+    to{/*Como esta el estilo al final*/
         opacity: 0.2;
     }
 }
 img{
-    opacity: 1;/*en el caso de la transicion se pone asi el estado normal*/
-    transition-property: opacity;/*que va a cambiar*/
-    transition-duration: 0.5s;/*todo esto de las transiciones se puede hacer de una con transition: x... o con animation: x...*/
+    opacity: 1;/*En el caso de la transicion se pone asi el estado normal*/
+    transition-property: opacity;/*Que va a cambiar*/
+    transition-duration: 0.5s;/*Todo esto de las transiciones se puede hacer de una con transition: x... o con animation: x...*/
     transition-timing-function: ease-in-out;
 }
 img:hover{
-    opacity: 0.2;/*en el caso de la transicion se pone el estado final donde se ejecute la animacion*/
+    opacity: 0.2;/*En el caso de la transicion se pone el estado final donde se ejecute la animacion*/
 }
 
 /*FLEXBOX:*/
 div.contenedor{
-    display: flex;/*el container tiene que ser flex, seran sus items los que se muevan*/
+    display: flex;/*El container tiene que ser flex, seran sus items los que se muevan*/
     background-color: #2e2d00;
-    flex-direction: row;/*la direccion en la que se ordenan los items, (row orizontal, row-reverse, column vertical, column-reverse)*/
-    flex-wrap: wrap;/*como se comportan los items si no hay espacio (nowrap como normal, wrap se autoajustan como bloques, wrap-reverse)*/
-    justify-content: space-evenly;/*como se ordenan los items en la coordenada afectada (flex-start, flex-end, center, space-between, space-around, space-evenly)*/
-    align-items: center;/*como se ajsutan los items en la coordenada no afectada (flex-start, flex-end, center, stretch, baseline)*/
-    align-content: space-around;/*donde se ponen las filas/columnas (flex-start, flex-end, center, space-between, space-around- stretch)*/
+    flex-direction: row;/*La direccion en la que se ordenan los items, (row orizontal, row-reverse, column vertical, column-reverse)*/
+    flex-wrap: wrap;/*Como se comportan los items si no hay espacio (nowrap como normal, wrap se autoajustan como bloques, wrap-reverse)*/
+    justify-content: space-evenly;/*Como se ordenan los items en la coordenada afectada (flex-start, flex-end, center, space-between, space-around, space-evenly)*/
+    align-items: center;/*Como se ajsutan los items en la coordenada no afectada (flex-start, flex-end, center, stretch, baseline)*/
+    align-content: space-around;/*Donde se ponen las filas/columnas (flex-start, flex-end, center, space-between, space-around- stretch)*/
 }
 div.bloque{
     background-color: rgb(117, 167, 84);
@@ -282,14 +281,14 @@ div.bloque{
 /*GRID:*/
 div.contenedor2{
     background-color: blue;
-    display: grid;/*pone todos sus elementos interiores en cuadricula*/
-    grid-template-columns: 100px 100px 100px;/*como se distribuye en columnas, se puede poner auto*/
-    grid-template-rows: repeat(4, 100px);/*y en columnas            repeat pone varias veces el mismo valor*/
-    justify-items: end;/*en caso de que sobre espacio, como se escalan los bloques (start, center, end, stretch(cambia tamagno)), el tamagno de los bloques puede verse afectado*/
-    justify-content: center;/*en que lugar x se ponen los bloques (start, center, end, space-around, space-between, space-evenly)*/
-    align-content: start;/*lo mismo pero en y (start, center, end, space-around, space-between, space-evenly)*/
-    grid-auto-flow: column;/*el orden de los elementos (row, column, dense)*/
-    grid-template-areas:/*si en html los elementos tienen nombre, se puede hacer que ocupen varias casillas, no se pueden usar los grid-template-x*/
+    display: grid;/*Pone todos sus elementos interiores en cuadricula*/
+    grid-template-columns: 100px 100px 100px;/*Como se distribuye en columnas, se puede poner auto*/
+    grid-template-rows: repeat(4, 100px);/*Y en columnas            repeat pone varias veces el mismo valor*/
+    justify-items: end;/*En caso de que sobre espacio, como se escalan los bloques (start, center, end, stretch(cambia tamagno)), el tamagno de los bloques puede verse afectado*/
+    justify-content: center;/*En que lugar x se ponen los bloques (start, center, end, space-around, space-between, space-evenly)*/
+    align-content: start;/*Lo mismo pero en y (start, center, end, space-around, space-between, space-evenly)*/
+    grid-auto-flow: column;/*El orden de los elementos (row, column, dense)*/
+    grid-template-areas:/*Si en html los elementos tienen nombre, se puede hacer que ocupen varias casillas, no se pueden usar los grid-template-x*/
         "a a b"
         "a a b"
         "e f g"
@@ -298,7 +297,7 @@ div.contenedor2{
 }
 div.bloque2{
     background-color: aquamarine;
-    /*width: 50px;/*si no se pusiese la dimension x o y ocuparia todo lo que pueda*/
+    /*width: 50px;/*Si no se pusiese la dimension x o y ocuparia todo lo que pueda*/
     /*height: 50px;*/
     border: 1px solid black;
     margin: 10px;
@@ -306,8 +305,8 @@ div.bloque2{
 
 /*TRANSFORM:*/
 .block{
-    /*estas funciones cambian las propiedades de transform, no recomendable usarlas*/
-    transform: rotate(45deg);/*algunos elementos pueden ser rotados asi*/
-    transform: translate(3,50);/*cambiar la posicion x y y*/
-    transform: scale(12);/*cambiar el tamagno*/
+    /*Estas funciones cambian las propiedades de transform, no recomendable usarlas*/
+    transform: rotate(45deg);/*Algunos elementos pueden ser rotados asi*/
+    transform: translate(3,50);/*Cambiar la posicion x y y*/
+    transform: scale(12);/*Cambiar el tamagno*/
 }
